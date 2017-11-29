@@ -28,10 +28,10 @@ def get_top5_leagues_info():
             teams.sort(key=lambda team: team[2], reverse=True)  # сортировка по голам
             maxlen = max([len(x[0]) for x in teams[:5]])  # макс длина строки для ровного вывода
             print('{}\t{}\t{}'.format('Команда'.ljust(maxlen, ' '), 'Очки', 'Голы'))
-            for team in teams[:5]:
-                print('{}\t{}\t{}'.format(team[0].ljust(maxlen, ' '),
-                                        str(team[1]).ljust(4, ' '),
-                                        str(team[2]).ljust(4, ' ')))
+            for t_name, t_points, t_goals in teams[:5]:
+                print('{}\t{}\t{}'.format(t_name.ljust(maxlen, ' '),
+                                          str(t_points).ljust(4, ' '),
+                                          str(t_goals).ljust(4, ' ')))
 
 
 if __name__ == '__main__':
