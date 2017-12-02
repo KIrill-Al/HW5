@@ -27,7 +27,7 @@ def get_pokemon_info(number):
             result = '{}\t{}\t{}\t{}\n'.format('Номер'.ljust(15, ' '),
                                                'Имя'.ljust(15, ' '),
                                                'Рост'.ljust(15, ' '),
-                                               'Вес'.ljust(15, ' '))
+                                               'Масса'.ljust(15, ' '))
             result += '{}\t{}\t{}\t{}'.format(str(number).ljust(15, ' '),
                                               pokemon['name'].ljust(15, ' '),
                                               (str(pokemon['height'] / 10) + ' м').ljust(15, ' '),
